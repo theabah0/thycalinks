@@ -89,5 +89,38 @@
         <p>Revolutionizing the Web. <br> The future is almost here.</p>
         <button class="notify-btn">Notify Me</button>
     </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const notifyButton = document.querySelector(".notify-btn");
+
+        notifyButton.addEventListener("click", function() {
+            // Check if the browser supports notifications
+            if ("Notification" in window) {
+                if (Notification.permission === "granted") {
+                    // Show notification
+                    sendNotification();
+                } else if (Notification.permission !== "denied") {
+                    // Request permission
+                    Notification.requestPermission().then(permission => {
+                        if (permission === "granted") {
+                            sendNotification();
+                        }
+                    });
+                } else {
+                    alert("Notifications are blocked. Please enable them to receive updates.");
+                }
+            } else {
+                alert("Your browser does not support notifications.");
+            }
+        });
+
+        function sendNotification() {
+            new Notification("🚀 ThycaLinks - Coming Soon!", {
+                body: "Stay tuned! Our website is launching soon.",
+                icon: "https://via.placeholder.com/100" // Replace with your logo/icon URL
+            });
+        }
+    });
+    </script>
 </body>
 </html>
