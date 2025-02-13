@@ -1,1 +1,93 @@
-it works
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThycaLinks - Coming Soon</title>
+    <style>
+        /* Background Animation */
+        @keyframes moveBg {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* General Styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #0d0d0d, #1a1a1a, #222, #333);
+            background-size: 400% 400%;
+            animation: moveBg 8s ease infinite;
+            color: white;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+
+        /* Glassmorphism Card */
+        .container {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Glowing Button */
+        .notify-btn {
+            margin-top: 20px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            background: #0072ff;
+            color: white;
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 114, 255, 0.6);
+        }
+
+        .notify-btn:hover {
+            box-shadow: 0 0 20px rgba(0, 114, 255, 1);
+            transform: scale(1.05);
+        }
+
+        /* Floating Glow Effect */
+        @keyframes floating {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .container {
+            animation: floating 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ThycaLinks</h1>
+        <p>Revolutionizing the Web. <br> The future is almost here.</p>
+        <button class="notify-btn">Notify Me</button>
+    </div>
+</body>
+</html>
