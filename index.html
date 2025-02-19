@@ -128,9 +128,24 @@ width:70%
 background-color:rgba(5,5,200,1);
 border: 2px solid rgba(5,5,200,.4);
 
+
+
+  transition: all 0.3s ease-out; /* Smooth animation */
+ 
+  cursor: pointer;
+  
+  transition: bottom 0.3s ease-out; /* Smooth animation */
+ 
+  
+ 
+  border: none;
+  cursor: pointer;
+
+
+
 bottom:5%;
 display:flex;
-border-radius:50px;
+border-radius:10px;
     text-align: ;
     padding: 20px;
 }
@@ -176,7 +191,7 @@ color:red
     padding: 15px; 
     margin-bottom: 20px; 
     text-align:center;
-
+    font-weight:400
 }
 
 .service-box h4 {
@@ -187,7 +202,7 @@ color:red
 .stats {
    display: flex; 
    justify-content: space-around; 
-   padding: 40px; 
+   padding: 0px; 
    background-color: transparent; 
 text-align:center;
 border-radius:20px;
@@ -198,14 +213,15 @@ background-color:rgba(200,200,200,.9);
 color:blue
 }
 .stats div h2{
-   font-size:2.2rem;
+   font-size:1.5rem;
    margin-bottom: .8rem;
    
 }
 
 .stats div p{
    font-size:1 rem;
-   color:#111
+   color:#fff;
+   font-weight:500;
    
 }
 
@@ -445,7 +461,20 @@ email:thycalinks@gmail.com
 <script>
 
 //setInterval(function(){location.reload()},1000);
+window.addEventListener("scroll", function () {
+  // Get all buttons with the class "cta-button"
+  let buttons = document.querySelectorAll(".call-to-action");
 
+  // Loop through each button and adjust its position
+  buttons.forEach(function(button) {
+    let scrollY = window.scrollY;
+if (scrollY>1200){
+    
+}else{
+    // Adjust the button's bottom position based on scroll
+    button.style.bottom = 20 + scrollY * 0.5 + "px"; }
+  });
+});
 </script>
     
 </body>
