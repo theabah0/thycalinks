@@ -79,6 +79,12 @@ font-size:15px;
     font-size: 24px;
 }
 
+#toggleDiv{
+    
+    display:none;
+    
+}
+
 .nav-bar a {
     color: white;
     text-decoration: none;
@@ -241,13 +247,17 @@ footer {
    color:white; 
 }
 .nav-bar{
-display:none;
+font-size:1vw;
 }
 
 #contacts,#about p{
 color:
 }
 
+button{
+    
+ border:none;
+}
 
 /* Styles for phone screens (max width of 768px) */
 @media screen and (max-width: 768px) {
@@ -291,10 +301,13 @@ color:
     <header>
         <div class="logo">THYCALINKS</div>
 <div id="ham">
-
+   <button  onclick="document.getElementById('toggleDiv').style.display = document.getElementById('toggleDiv').style.display === 'none' ? 'block' : 'none'">
 <span class="material-symbols-outlined">menu</span>
+
+</button>
+
 </div>
-        <div class="nav-bar" display="none">
+        <div id="toggleDiv" class="nav-bar" display="nonhe">
             <a href="#services"><h3>Our Services</h3></a>
   
             <a href="#about"><h3>About us</h3></a>
