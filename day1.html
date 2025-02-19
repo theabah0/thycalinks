@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007BFF;
+    padding: 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.nav-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('https://via.placeholder.com/1200x400');
+    background-size: cover;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+}
+
+.hero-section h4 {
+    font-size: 18px;
+}
+
+/* Review Section */
+.review {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+}
+
+.call-to-action a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.call-to-action a:hover {
+    text-decoration: underline;
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.service-categories {
+    flex-basis: 30%;
+    margin-top: 20px; 
+}
+
+.service-box {
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 15px; 
+    margin-bottom: 20px; 
+}
+
+.service-box h4 {
+   margin-bottom: 10px; 
+}
+
+/* Stats Section */
+.stats {
+   display: flex; 
+   justify-content: space-around; 
+   padding: 40px; 
+   background-color: #e9ecef; 
+}
+
+.stats div {
+   text-align: center; 
+}
+
+/* About and Contacts Section */
+#about, #contacts {
+   padding: 40px; 
+   background-color: white; 
+   margin-top: 20px; 
+   border-radius: 10px; 
+}
+
+/* Footer Styles */
+footer {
+   text-align:center; 
+   padding :20px; 
+   background-color:#007BFF; 
+   color:white; 
+}
+</style>
+    <stylde>
+/*gensrate css that goes here and make it aoproriate */
+  /* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #222;
+    border-bottom: 3px solid #f1c40f;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: #f1c40f;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: white;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-section h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-section h4 {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Review Section */
+.review {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.review p {
+    font-style: italic;
+    color: #ddd;
+}
+
+.review h5, .review h6 {
+    margin-top: 8px;
+    color: #f1c40f;
+}
+
+/* Call to Action */
+.call-to-action {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.call-to-action a {
+    display: inline-block;
+    color: #1b1b1b;
+    background-color: #f1c40f;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.call-to-action a:hover {
+    background-color: orange;
+}
+
+/* Services Section */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    display: flex;           /* Enables Flexbox */
+    justify-content: space-between; /* Distributes columns evenly */
+    gap: 20px;               /* Adds space between columns */
+
+}
+
+.services h2 {
+    text-decoration: underline;
+    font-size: 30px;
+    margin-bottom: 20px;
+    }
+
+/* Grid layout for categories 
+.service-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+ Service Box Styling 
+.service-box {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    color: #f1c40f;
+} 
+*/
+
+.service-box:hover {
+    transform: translateY(-5px);
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-categories {
+        grid-template-columns: 1fr;
+    }
+}
+/* Stats Section */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.stats div {
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.stats h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.stats p {
+    color: #ccc;
+}
+
+/* About Us */
+#about, #contacts {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#about h2, #contacts h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#about p, #contacts p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #f1c40f;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats div {
+        width: 80%;
+    }
+}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+    </style>
+    <meta charset="UTF-8">
+    <title>Thycalinks</title>
+</head>
+<body>
+    <header>
+        <div class="logo">LOGO💯💯</div>
+        <div class="nav-bar">
+            <a href="#services"><h3>Our Services</h3></a>
+  
+            <a href="#about"><h3>About us</h3></a>
+            <a href="#contacts"><h3>Contacts</h3></a>
+        </div>
+        
+    </header>
+    
+    <div class="hero-section">
+        <h1>What we actually do</h1>
+        <h4>there can also be a small wordy passage here that most people wont even read. Atleast not at first
+        Its explaining what you do in detail. brief detail
+        </h4>
+         <div class="review"> 
+            <p>These guys are the best sincerely speaking from the bottom of my heart walayi</p>
+            <h5>The guy's name</h5>
+            <h6>where the guy works and his position</h6>
+        </div>
+    </div>
+    <div class="call-to-action"><a href="tel:0762959404"><h2>call us now</h2></a> or <a href="mailto:thycalinks@gmail.com"><h2>Email Us</h2></a></div>
+    <h2>Services</h2>
+    <section class="services">
+        
+        <div class="service-categories">
+            <h3>Design</h3>
+            <div class="service-box"><h4>Websites</h4>
+            some explanation about websites
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Logos</h4>
+            some explanation about logos
+            maybe an icon too
+            </div>
+               <div class="service-box"><h4>Fliers</h4>
+            some explanation about websites
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Posters</h4>
+            some explanation about logos
+            maybe an icon too
+            </div>
+        </div>
+        <div class="service-categories">
+            <h3 class="">Branding</h3>
+            <div class="service-box"><h4>Billboards</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Indoor signs</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Awards</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Tags</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+        </div>
+          <div class="service-categories">
+            <h3>Customized</h3>
+            <div class="service-box"><h4>Clothing</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Stationery</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Bottles/Cups</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+            <div class="service-box"><h4>Vehicle painting</h4>
+            some explanation about them
+            maybe an icon too
+            </div>
+        </div>
+    </section>
+    <div class="stats">
+        <div>
+            <h2>1000</h2><p>logos designed</p>
+            
+        </div>
+         <div>
+            <h2>50</h2><p>brands under mamagement</p>
+            
+        </div>
+        <div>
+            <h2>10</h2><p>years of exceptional service</p>
+            
+        </div>
+    </div>
+     <div class="review"> 
+            <p>These guys are the best sincerely speaking from the bottom of my heart walayi</p>
+            <h5>The guy's name</h5>
+            <h6>where the guy works and his position</h6>
+        </div>
+<div id="about">
+    <h2>About us</h2>
+    <p>write something about yourself. 
+    Be sure that nobody cares </p>
+    
+</div>
+<div id="contacts">
+    <h2>About us</h2>
+    <p>write something about yourself. 
+    Be sure that nobody cares </p>
+    
+</div>
+    <footer>
+        footer
+        we shall be seeing what to put in here
+    </footer>
+    
+</body>
+</html>

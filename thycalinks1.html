@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll-Based Image Animation</title>
+    <style>
+        body {
+            height: 300vh; /* Creates a long scrolling effect */
+            background: black;
+            overflow-x: hidden;
+        }
+
+        .image-container {
+            position: fixed; /* Keeps it in place while scrolling */
+            top: 20%;
+            left: 0;
+            width: 100vw;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .moving-image {
+            width: 400px;
+            height: auto;
+            position: absolute;
+            will-change: transform;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img src="redback.png" class="moving-image" id="img1" style="left: 10%;">
+        <img src="yellowback.png" class="moving-image" id="img2" style="left: 50%;">
+        <img src="redfront.png" class="moving-image" id="img3" style="left: 80%;">
+    </div>
+
+    <script>
+        function animateImages() {
+            let scrollProgress = window.scrollY / (document.body.scrollHeight - window.innerHeight); // Normalized scroll value (0 to 1)
+
+            document.getElementById('img1').style.transform = `translateX(${scrollProgress * 200}px)`;
+            document.getElementById('img2').style.transform = `translateY(${scrollProgress * 300}px)`;
+            document.getElementById('img3').style.transform = `translateX(${scrollProgress * -150}px) rotate(${scrollProgress * 360}deg)`;
+        }
+
+        window.addEventListener('scroll', animateImages);
+    </script>
+
+</body>
+</html>

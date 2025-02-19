@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thycalinks - Design & Branding Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.3;
+            font-size: 0.85rem;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: #fff;
+            padding: 0.5rem 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        header .logo {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        header .nav-bar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 0.6rem;
+            transition: color 0.3s ease;
+            font-size: 0.8rem;
+        }
+
+        header .nav-bar a:hover {
+            color: #bbb;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('https://source.unsplash.com/random/1600x900'); /* Corrected URL */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            padding: 6rem 2.5rem;
+            border-radius: 12px;
+            margin-top: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.03);
+            z-index: 1;
+        }
+
+        .hero-section h1 {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-section h4 {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #ddd;
+        }
+
+        /* Eye-Catching Review Styles */
+        .review {
+            background-color: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .review p {
+            font-style: italic;
+            margin-bottom: 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        .review h5 {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .review h6 {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .review::before {
+            content: '\f10d';
+            font-family: FontAwesome;
+            position: absolute;
+            top: 0.6rem;
+            left: 0.6rem;
+            font-size: 1.2rem;
+            color: #007bff;
+            opacity: 0.5;
+        }
+
+        /* Eye-Catching Call to Action Styles */
+        .call-to-action {
+            text-align: center;
+            padding: 2.5rem 0;
+            background: linear-gradient(135deg, #007bff, #0056b3);
+            border-radius: 15px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+            margin: 2.5rem auto;
+            max-width: 70%;
+            position: relative;
+            z-index: 2;
+            overflow: hidden;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            font-weight: 500;
+        }
+
+        .call-to-action::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+            animation: shine 5s infinite linear;
+            transform: translateX(-50%);
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0%); }
+        }
+
+        .call-to-action a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 1rem 1.8rem;
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, 0.25);
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            display: inline-block;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-to-action a:hover {
+            background-color: rgba(255, 255, 255, 0.45);
+            transform: scale(1.03);
+        }
+
+        /* Services Section Styles */
+        .services {
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.2rem;
+            margin-bottom: 2.5rem;
+            text-transform: uppercase;
+            color: #555;
+            letter-spacing: 1.5px;
+            text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            width: 90%;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .service-categories h3 {
+            font-size: 1.5rem;
+            width: 100%;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: #444;
+            text-transform: capitalize;
+        }
+
+        /* Classy Image Card Styles (Grid Optimized) */
+        .service-box {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 18px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .service-box:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .service-box:hover img {
+            transform: scale(1.08);
+        }
+
+        .service-box h4 {
+            font-size: 1.2rem;
+            margin: 1.2rem;
+            text-align: left;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .service-box p {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 0 1.2rem 1.2rem 1.2rem;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .service-box .cta-links {
+            display: flex;
+            justify-content: space-around;
+            padding: 1.2rem;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-top: 1px solid #eee;
+        }
+
+        .service-box .cta-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            background-color: rgba(0, 123, 255, 0.1);
+            transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .service-box .cta-links a:hover {
+            background-color: rgba(0, 123, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .service-box .cta-links i {
+            margin-right: 0.4rem;
+        }
+
+        /* Stats Styles */
+        .stats {
+            background: linear-gradient(to bottom, #333, #444);
+            color: #fff;
+            padding: 3rem;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            margin: 3rem auto;
+            max-width: 70%;
+        }
+
+        .stats div h2 {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            text-shadow: 0.8px 0.8px 1.5px rgba(0, 0, 0, 0.3);
+        }
+
+        .stats div p {
+            font-size: 1rem;
+            color: #ddd;
+        }
+
+        /* About Us & Contact Styles */
+        #about, #contacts {
+            padding: 3rem;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #about h2, #contacts h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.8rem;
+            text-transform: uppercase;
+            color: #555;
+            letter-spacing: 1.5px;
+        }
+
+        #about p, #contacts p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1.8rem 0;
+            font-size: 0.9rem;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header .nav-bar {
+                margin-top: 0.4rem;
+            }
+
+            header .nav-bar a {
+                margin: 0 0.4rem;
+            }
+
+            .stats {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+
+            .service-categories {
+                grid-template-columns: 1fr;
+            }
+
+            .service-box {
+                width: 100%;
+            }
+
+            .call-to-action a {
+                margin: 0.8rem;
+                font-size: 1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Thycalinks</div>
+        <div class="nav-bar">
+            <a href="#services">Our Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contacts">Contacts</a>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <h1>We Transform Ideas into Stunning Realities</h1>
+        <h4>We are a creative design and branding agency dedicated to helping businesses like yours stand out. With expertise in web design, logo creation, and comprehensive branding strategies, we deliver solutions that captivate and convert.</h4>
+         <div class="review"> 
+            <p>"Thycalinks completely transformed our brand identity. Their designs are innovative, and their service is exceptional. Highly recommended!"</p>
+            <h5>John Doe</h5>
+            <h6>Marketing Director, InnovateTech</h6>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <a href="tel:0762959404"><i class="fas fa-phone"></i> Call Us Now</a>
+        <a href="mailto:thycalinks@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+    </div>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-categories">
+            <h3>Design</h3>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Website Design">
+                <h4>Websites</h4>
+                <p>Crafting responsive and visually appealing websites that enhance user experience and drive business growth.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Logo Design">
+                <h4>Logos</h4>
+                <p>Creating unique and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Flyer Design">
+                <h4>Fliers</h4>
+                <p>Designing eye-catching fliers that effectively communicate your message and attract your target audience.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Poster Design">
+                <h4>Posters</h4>
+                <p>Producing impactful posters that promote your events, products, or services with creative and strategic designs.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+              <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="branding Design">
+                <h4>Branding</h4>
+                <p>Creating unique and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="email Design">
+                <h4>Email</h4>
+                <p>Designing eye-catching fliers that effectively communicate your message and attract your target audience.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="graphics Design">
+                <h4>Graphics</h4>
+                <p>Producing impactful posters that promote your events, products, or services with creative and strategic designs.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+              <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="marketing Design">
+                <h4>Marketing</h4>
+                <p>Creating unique and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="advertise Design">
+                <h4>Advertise</h4>
+                <p>Designing eye-catching fliers that effectively communicate your message and attract your target audience.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="company Design">
+                <h4>Company</h4>
+                <p>Producing impactful posters that promote your events, products, or services with creative and strategic designs.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-categories">
+            <h3>Branding</h3>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Billboard Design">
+                <h4>Billboards</h4>
+                <p>Designing high-impact billboards that maximize visibility and reach, ensuring your brand gets noticed.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Indoor Sign Design">
+                <h4>Indoor Signs</h4>
+                <p>Creating professional indoor signage that enhances your brand presence and guides your customers effectively.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Award Design">
+                <h4>Awards</h4>
+                <p>Designing custom awards that recognize achievements and celebrate milestones with elegance and prestige.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Tag Design">
+                <h4>Tags</h4>
+                <p>Developing distinctive tags that reinforce your brand identity and add a professional touch to your products.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="vehicle Design">
+                <h4>Vehicle Branding</h4>
+                <p>Creating professional vehicle branding that enhances your brand presence .</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="fashion Design">
+                <h4>Fashion</h4>
+                <p>Designing custom outfits that recognize achievements and celebrate milestones with elegance and prestige.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="product Design">
+                <h4>Product</h4>
+                <p>Developing distinctive product that reinforce your brand identity.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="mockups Design">
+                <h4>Mockups</h4>
+                <p>Creating professional Mockups</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="template Design">
+                <h4>Template</h4>
+                <p>Designing custom templates milestones with elegance and prestige.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="brand Design">
+                <h4>Brand</h4>
+                <p>Developing distinctive brand </p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-categories">
+            <h3>Customized</h3>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Clothing Design">
+                <h4>Clothing</h4>
+                <p>Offering customized clothing designs that promote your brand and create a unified and professional look.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Stationery Design">
+                <h4>Stationery</h4>
+                <p>Designing personalized stationery that enhances your brand image and leaves a lasting impression on your clients.</p>
+                <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Bottle Design">
+                <h4>Bottles/Cups</h4>
+                <p>Creating unique designs for bottles and cups that promote your brand and make your products stand out.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+            <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="Vehicle Painting">
+                <h4>Vehicle Painting</h4>
+                <p>Providing custom vehicle painting services that turn your vehicles into mobile advertisements for your brand.</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="hats Painting">
+                <h4>Hats</h4>
+                <p>Providing custom Hats Painting </p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="printing Painting">
+                <h4>Printing</h4>
+                <p>Providing custom Printing services</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="clothes Design">
+                <h4>Clothes</h4>
+                <p>Providing Clothes Design</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="paints Painting">
+                <h4>Paints</h4>
+                <p>Providing custom Paints services</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="wall Design">
+                <h4>Wall Design</h4>
+                <p>Providing custom Wall Designs</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+             <div class="service-box">
+                <img src="https://source.unsplash.com/random/300x200" alt="bags Design">
+                <h4>Bags</h4>
+                <p>Providing custom Bags Designs</p>
+                 <div class="cta-links">
+                    <a href="#"><i class="fas fa-hand-point-right"></i> Request</a>
+                    <a href="#"><i class="fas fa-info-circle"></i> Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats">
+        <div>
+            <h2>1000+</h2>
+            <p>Logos Designed</p>
+        </div>
+        <div>
+            <h2>50+</h2>
+            <p>Brands Under Management</p>
+        </div>
+        <div>
+            <h2>10+</h2>
+            <p>Years of Exceptional Service</p>
+        </div>
+    </div>
+
+    <div class="review">
+        <p>"Working with Thycalinks was a game-changer for our business. Their attention to detail and creative approach helped us build a brand that truly resonates with our customers."</p>
+        <h5>Jane Smith</h5>
+        <h6>CEO, FutureForward Solutions</h6>
+    </div>
+
+    <div id="about">
+        <h2>About Us</h2>
+        <p>At Thycalinks, we are passionate about design and dedicated to helping businesses thrive. With a team of experienced professionals, we offer a comprehensive suite of services tailored to meet your unique needs. Our commitment to quality, creativity, and client satisfaction sets us apart. We believe that great design is not just about aesthetics; it's about creating meaningful connections and driving real results.</p>
+    </div>
+
+    <div id="contacts">
+        <h2>Contact Us</h2>
+        <p>Ready to elevate your brand? Contact us today to discuss
