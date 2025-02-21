@@ -8,35 +8,34 @@ background-color:transparent;
 text-align:center;
 padding:2px;
 color:white;
-    max-width:100%;
+    max-width:100vw;
+    transition: all 2s ease-in-out;
 }
 
 
-
+p:hover{
+    color:#fdd;
+    font-weight:500
+}
  /* Remove default margin and padding */
 body {
-  margin: 0;
-  padding: 0;
-  width: 100/* Remove default margin and padding */
-body {
+  
   margin: 0;
   padding: 0;
   width: 100vw;
-  box-sizing: border-box;
-};
-  box-sizing: border-box;
+  background-color:red;
 font-family: "Exo", serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
     
-    background: linear-gradient(rgba(5,5,200,1),
-rgba(20,17,50,.8),
-rgba(105,5,255,1),
-rgba(20,10,125,.9),
-rgba(120,17,120,.7),
+    background: linear-gradient(rgba(1,1,50,1),
+rgba(5,5,15,1),
+rgba(25,5,55,1),
+rgba(20,10,50,.9),
+rgba(20,17,20,.7),
 
-rgba(17,17,255,.9)
+rgba(17,17,55,.9)
 
 
 
@@ -63,6 +62,11 @@ header {
     background-color: transparent;
     padding: 20px;
     color: white;
+}
+
+.logo img{
+    height: 5vh;
+    border:1px solid red;
 }
 .hero-section{
 
@@ -107,7 +111,7 @@ margin:auto
 }
 
 .hero-section h1 {
-   // 
+   color:rgba(250,240,245,1)
 }
 
 .hero-section p{
@@ -118,7 +122,7 @@ text-align:center
 
 /* Review Section */
 .review {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: rgba(25, 5, 5, .3);
     border-radius: 5%;
 height:25%;
     padding: ;
@@ -131,7 +135,7 @@ width:70%
 /* Call to Action */
 .call-to-action {
  position: fixed;
-background-color:rgba(5,5,200,1);
+background-color:rgba(1,1,50,1);
 border: 2px solid rgba(5,5,200,.4);
 
 
@@ -153,14 +157,14 @@ bottom:5%;
 display:flex;
 border-radius:10px;
     text-align: ;
-    padding: 20px;
+    
 }
 .call-to-action a{
 text-decoration:none;
  
 }
 .call-to-action span{
-font-size: 7vw;
+font-size: 6vh;
 
 }
 #callbutton{
@@ -193,7 +197,7 @@ color:red
      font-size:1.5vh;
     border-radius: 10px; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    height:20vh;
+    height:30vh;
     padding: 15px; 
     margin-bottom: 20px; 
     text-align:center;
@@ -203,7 +207,11 @@ color:red
 }
 
 .service-box:hover{
-    transform:rotate(5deg);
+   
+    margin:auto;
+    transition: all 0.4s ease-in-out;
+    transform:scale(1.1);
+    height:30%;
     color:blue;
     background-color:rgba(120,17,120,.7);
     border:1px solid white;
@@ -251,10 +259,76 @@ color:blue
 
 /* Footer Styles */
 footer {
-   text-align:center; 
-   padding :20px; 
-   background-color:#007BFF; 
-   color:white; 
+    background: linear-gradient(to right, rgba(1,1,50,1), rgba(5,5,15,1));
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #fdd;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.footer-social img:hover {
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    background-color: rgba(10, 10, 50, 0.8);
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
 .nav-bar{
 font-size:1vw;
@@ -269,19 +343,28 @@ button{
  border:none;
 }
 
-/* Styles for phone screens (max width of 768px) */
+/* Styles for phone screens (max width of 768px) 
 @media screen and (max-width: 768px) {
   body {
     font-size: 16px;
-    background-color:red;
+    
   }
   .review{
       font-size:8px
+  }
+  .hero-section{
+      border:1px solid red;
+      height:100vh
+  }
+  .hero-section h1{
+      
+      font-size:10vw
   }
   .service-box p{
   font-size:7px;
   
 }
+
 .service-box{
     height:25vh;
     border:1px solid transparent;
@@ -292,6 +375,115 @@ button{
     bottom :12px;
     left:35%
 }
+}*/
+@media screen and (max-width: 768px) {
+  /* General adjustments */
+  body {
+    font-size: 16px;
+    
+  }
+
+  /* Hero Section */
+  .hero-section {
+    width: 80%;
+    height: auto;
+    padding: auto;
+    
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 9vw;
+    line-height: 1.2;
+  }
+
+  .hero-section p {
+    font-size: 4vw;
+    padding: 5px;
+  }
+
+  /* Reviews */
+  .review {
+    font-size: 12px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  /* Navigation */
+  .nav-bar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(10, 10, 50, 0.9);
+    padding: 0px 0;
+    z-index: 100;
+  }
+
+  .nav-bar a {
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+  }
+
+  /* Responsive Menu Toggle */
+  #ham {
+    display: block;
+  }
+
+  #toggleDiv {
+    display: none;
+  }
+
+  /* Services Section */
+  .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-categories {
+    width: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .service-box {
+    width: 90%;
+    height:30vh;
+    padding: 15px;
+    padding-bottom:5px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 14px;
+  }
+
+  /* CTA Buttons */
+ 
+
+  /* Stats Section */
+  .stats {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  .stats div {
+    margin-bottom: 15px;
+  }
+
+  /* About & Contact */
+  
+
+  /* Footer */
+  footer {
+    font-size: 14px;
+    padding: 15px;
+  }
 }
 
 </style>
@@ -309,7 +501,11 @@ button{
 </head>
 <body>
     <header>
-        <div class="logo">THYCALINKS</div>
+        <div class="logo">
+            
+            <img src="thycalinkslogo.png"  />
+            
+        </div>
 <div id="ham">
    <button  onclick="document.getElementById('toggleDiv').style.display = document.getElementById('toggleDiv').style.display === 'none' ? 'block' : 'none'">
 <span class="material-symbols-outlined">menu</span>
@@ -390,33 +586,37 @@ button{
 
 
 
-
-        <div class="service-categories">
-            <h3 class="">Branding</h3>
-            <div class="service-box">
-<span class="material-symbols-outlined">developer_board</span>
-<h4>Billboards</h4>
-          <p>  Creating unique and memorable logos that capture the essence of your brand and leave a lasting impression.</p>
-<span class="learn more material-symbols-outlined">read_more</span>         
-   </div>
-            <div class="service-box">
-<span class="material-symbols-outlined">nest_wifi_router</span>
-<h4>Indoor signs</h4>
-          <p>  some explanation about them
-            maybe an icon too</p>
-<span class="learn more material-symbols-outlined">read_more</span>
-            </div>
-            <div class="service-box"><span class="material-symbols-outlined">trophy</span><h4>Awards</h4>
-        <p>    some explanation about them</p>
-            maybe an icon too
-<span class="learn more material-symbols-outlined">read_more</span>
-            </div>
-            <div class="service-box"><span class="material-symbols-outlined">bookmark</span><h4>Tags</h4>
-          <p>  some explanation about them
-            maybe an icon too</p>
-<span class="learn more material-symbols-outlined">read_more</span>
-            </div>
-        </div>
+<div class="service-categories">
+    <h3 class="">Branding</h3>
+    
+    <div class="service-box">
+        <span class="material-symbols-outlined">developer_board</span>
+        <h4>Billboards</h4>
+        <p>Designing eye-catching and impactful billboard advertisements that effectively communicate your brand's message to a wide audience.</p>
+        <span class="learn more material-symbols-outlined">read_more</span>         
+    </div>
+    
+    <div class="service-box">
+        <span class="material-symbols-outlined">nest_wifi_router</span>
+        <h4>Indoor Signs</h4>
+        <p>Creating high-quality indoor signage solutions for offices, retail stores, and events to enhance brand visibility and customer engagement.</p>
+        <span class="learn more material-symbols-outlined">read_more</span>
+    </div>
+    
+    <div class="service-box">
+        <span class="material-symbols-outlined">trophy</span>
+        <h4>Awards & Trophies</h4>
+        <p>Custom-designed awards, plaques, and trophies that recognize achievements and reinforce your brand identity in corporate and competitive settings.</p>
+        <span class="learn more material-symbols-outlined">read_more</span>
+    </div>
+    
+    <div class="service-box">
+        <span class="material-symbols-outlined">bookmark</span>
+        <h4>Custom Tags</h4>
+        <p>Personalized branding tags, labels, and stickers that add a professional touch to your products and enhance brand recognition.</p>
+        <span class="learn more material-symbols-outlined">read_more</span>
+    </div>
+</div>
 
 
 
@@ -447,15 +647,15 @@ button{
     </section>
     <div class="stats">
         <div>
-            <h2>1000+</h2><p>logos designed</p>
+            <h2>1000+</h2><p>logos, profiles and catalogues designed</p>
             
         </div>
          <div>
-            <h2>50+</h2><p>brands under mamagement</p>
+            <h2>50+</h2><p>digital portfolios boosting small and medium enterprises</p>
             
         </div>
         <div>
-            <h2>10+</h2><p>years of exceptional service</p>
+            <h2>10+</h2><p>years of customer satisfaction</p>
             
         </div>
     </div>
@@ -471,16 +671,37 @@ button{
 </div>
 <div id="contacts">
     <h2>Contacts</h2>
-    <p> telephone: 073648237659
+    <p> telephone: <a href="tel:0766532876">0766532876</a>
 
-email:thycalinks@gmail.com
+<a href="mailto:thycalinks@gmail.com">email:thycalinks@gmail.com</a>
 </p>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelbat5l9aZcI8Hk3s20OTOCOLgldzY-Q0SC0abcx8aWoekLg/viewform?embedded=true" width="640" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
-    <footer>
-        footer
-        we shall be seeing what to put in here
-    </footer>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelbat5l9aZcI8Hk3s20OTOCOLgldzY-Q0SC0abcx8aWoekLg/viewform?embedded=true" width="440" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+   <footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="thycalinkslogo.png" alt="Thycalinks Logo">
+        </div>
+        <div class="footer-links">
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contacts">Contact</a>
+        </div>
+        <div class="footer-contact">
+            <p>📞 <a href="tel:0762959404">0762 959 404</a></p>
+            <p>📧 <a href="mailto:thycalinks@gmail.com">thycalinks@gmail.com</a></p>
+        </div>
+        <div class="footer-social">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Thycalinks. All Rights Reserved.</p>
+    </div>
+</footer>
 <script>
 
 //setInterval(function(){location.reload()},1000);
