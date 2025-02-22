@@ -30,9 +30,9 @@ font-family: "Exo", serif;
   font-weight: 200;
   font-style: normal;
     
-    background: linear-gradient(rgba(1,1,50,1),
-rgba(5,5,15,1),
-rgba(25,5,55,1),
+    background: linear-gradient(rgba(60,1,5,.8),
+rgba(5,5,15,.9),
+rgba(55,5,5,.9),
 rgba(20,10,50,.9),
 rgba(20,17,20,.7),
 
@@ -41,8 +41,8 @@ rgba(17,17,55,.9)
 
 
 
-);
-    color: #;
+),url("Wblaise-84.jpg")
+    
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -112,7 +112,9 @@ margin:auto
 }
 
 .hero-section h1 {
-   color:rgba(250,240,245,1)
+  /* color:rgba(250,240,245,1)*/
+  color:white;
+  
 }
 
 .hero-section p{
@@ -524,7 +526,10 @@ button{
     </header>
     
     <div style="text-align:left" class="hero-section">
-        <h1>We Design, We Brand<h1 style="color:gray"> You Stand Out</h1></h1>
+        <h1>We Design <br /><span id="text1"></span>,
+        </h1>
+        <h1>
+         We Brand <br /> <span id="text2"></span><!-- <h1 style="color:gray"> You Stand Out</h1> --></h1> 
         <p>We are a creative design and branding agency dedicated to helping businesses like yours stand out. With expertise in web design, logo creation, and comprehensive branding strategies, we deliver solutions that captivate and convert.
         </p>
          <div class="review"> 
@@ -729,6 +734,34 @@ if (scrollY>1200){
     button.style.bottom = 20 + scrollY * 0.5 + "px"; }
   });
 });
+
+function startTypingEffect(wordArray, targetId, speed = 100) {
+            let i = 0, j = 0, isDeleting = false;
+            const targetElement = document.getElementById(targetId);
+
+            function typeEffect() {
+                let currentWord = wordArray[i];
+                let displayText = isDeleting 
+                    ? currentWord.substring(0, j--) 
+                    : currentWord.substring(0, j++);
+                
+                targetElement.textContent = displayText;
+
+                if (!isDeleting && j > currentWord.length) {
+                    isDeleting = true;
+                } else if (isDeleting && j === 0) {
+                    isDeleting = false;
+                    i = (i + 1) % wordArray.length; // Move to the next word
+                }
+            }
+
+            setInterval(typeEffect, speed);
+        }
+
+        // Example calls for different elements
+      startTypingEffect(["Websites", "Posters", "Logos","Fliers","Graphics"], "text1", 150);
+        startTypingEffect(["Vehicles", "Buildings", "Clothing","Electronics"], "text2", 350);
+  
 </script>
     
 </body>
